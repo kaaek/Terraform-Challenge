@@ -15,3 +15,6 @@ crash.log
 # Override files (Included for good practice)
 override.tf
 override.tf.json
+
+# Documents
+.pdf

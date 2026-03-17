@@ -43,3 +43,9 @@ variable "my_ip" {
     description = "Your public IP for SSH access (e.g., 203.0.113.50/32)"
     type = string
 }
+
+variable "db_password" {
+  description = "Database password"
+  type        = string
+  sensitive   = true
+}
