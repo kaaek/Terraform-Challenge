@@ -1,0 +1,2 @@
+# Terraform-Challenge
+Two-tier web architecture on AWS using Terraform: (1) Public-facing web tier running Nginx behind an external Application Load Balancer. (2) Private backend tier running a Node.js Express API that is only reachable through the web tier's reverse proxy. (3) VPC (choose CIDR). (4) 2 public and 2 private subnets across 2 AZs. (5) NAT gateway. (6) Security groups w/ tier-to-tier access control. (7) Auto scaling groups for both tiers. (8) Secrets stored in SSM parameter store.
