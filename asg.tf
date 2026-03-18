@@ -2,7 +2,7 @@
 resource "aws_launch_template" "web" {
     name_prefix = "lab-web-lt-"
     image_id = data.aws_ami.amazon_linux.id
-    instance_type = "t2.micro"
+    instance_type = "t3.micro"
     key_name = var.key_name
     vpc_security_group_ids = [aws_security_group.web.id]
 
@@ -22,7 +22,7 @@ resource "aws_launch_template" "web" {
 resource "aws_launch_template" "backend" {
     name_prefix = "lab-backend-lt-"
     image_id = data.aws_ami.amazon_linux.id
-    instance_type = "t2.micro"
+    instance_type = "t3.micro"
     key_name = var.key_name
     vpc_security_group_ids = [aws_security_group.backend.id]
 

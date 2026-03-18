@@ -25,12 +25,12 @@ resource "aws_iam_instance_profile" "ec2_ssm_profile" {
 }
 
 # 4 — Store secret in SSM Parameter Store
-resource "aws_ssm_parameter" "db_password" {
-  name  = "/lab/db_password"
+resource "aws_ssm_parameter" "app_secret" {
+  name  = "/lab/app_secret"
   type  = "SecureString"
-  value = var.db_password
+  value = var.app_secret
 
   tags = {
-    Name = "Lab-DB-Password"
+    Name = "Lab-App-Secret"
   }
 }

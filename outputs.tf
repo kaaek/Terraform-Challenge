@@ -13,7 +13,7 @@ output "bastion_public_ip" {
   value       = aws_instance.bastion.public_ip
 }
 
-output "db_password_parameter_name" {
-  description = "SSM Parameter Store name for DB password"
-  value       = aws_ssm_parameter.db_password.name
+output "app_secret_parameter_name" {
+  description = "SSM Parameter Store name for app secret"
+  value       = aws_ssm_parameter.app_secret.name
 }

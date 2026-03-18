@@ -36,7 +36,7 @@ cat > /usr/share/nginx/html/index.html << 'HTMLEOF'
 <body>
 <div class="container">
   <!-- CHANGE THE NAME BELOW TO YOUR FULL NAME -->
-  <h1>Two-Tier App &mdash; [YOUR NAME HERE]</h1>
+  <h1>Two-Tier App &mdash; Khalil El Kaaki</h1>
   <p class="subtitle">Web Tier &rarr; Nginx Reverse Proxy &rarr; Backend API</p>
   <div class="card">
     <h2>Backend Health Check</h2>
@@ -98,7 +98,7 @@ server {
     index index.html;
 
     location / {
-        try_files $uri $uri/ =404;
+      try_files $uri $uri/ /index.html;
     }
 
     location /api/ {
@@ -112,8 +112,8 @@ NGINXEOF
 
 # Remove the default server block to avoid conflicts
 rm -f /etc/nginx/conf.d/default.conf
-sed -i '/^\s*server\s*{/,/^\s*}/d' /etc/nginx/nginx.conf 2>/dev/null || true
 
 # Start Nginx
-systemctl start nginx
+nginx -t
+systemctl restart nginx
 systemctl enable nginx

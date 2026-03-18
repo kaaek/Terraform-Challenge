@@ -51,7 +51,7 @@ resource "aws_lb_target_group" "backend" {
     target_type = "instance"
 
     health_check {
-        path = "/"
+        path = "/api/health"
         protocol = "HTTP"
         matcher = "200"
     }

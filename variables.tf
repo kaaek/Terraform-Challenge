@@ -44,8 +44,8 @@ variable "my_ip" {
     type = string
 }
 
-variable "db_password" {
-  description = "Database password"
+variable "app_secret" {
+    description = "Application secret value"
   type        = string
   sensitive   = true
 }

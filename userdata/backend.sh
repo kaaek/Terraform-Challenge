@@ -69,4 +69,4 @@ APPEOF
 
 # Run the server in the background
 chown -R ec2-user:ec2-user /home/ec2-user/app
-node server.js &
+sudo -u ec2-user nohup node /home/ec2-user/app/server.js > /home/ec2-user/app/backend.log 2>&1 &
