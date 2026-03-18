@@ -17,4 +17,4 @@ override.tf
 override.tf.json
 
 # Documents
-.pdf
+*.pdf
